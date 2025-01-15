@@ -304,7 +304,7 @@ def run_local(ref, base, *args):
     to_save_dict['edit2'] = pipe_out.img_pil
     return [to_save_dict['edit2'], to_save_dict['edge2_black']]
 
-with gr.Blocks() as demo:
+with gr.Blocks(analytics_enabled=False) as demo:
     with gr.Column():
         gr.Markdown("#  MangaNinja: Line Art Colorization with Precise Reference Following")
         
